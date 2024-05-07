@@ -1,6 +1,9 @@
 ---
+import GitHub from "./icons/GithubIcon.astro"
 import NextJs from './icons/NextJs.astro'
 import Html from "./icons/Html.astro"
+import Link from "./icons/Link.astro"
+import LinkButton from "./icons/LinkButton.astro"
 
 
 const TAGS = {
@@ -24,21 +27,30 @@ const TAGS = {
 }
 const PROJECTS = [
  {
-    title: 'Tienda Online: "La Pesebrera"',
-    description: 'Quería crear una tienda en línea fácil de usar, manteniendo la estética de la marca reconocible. La toma muestra una página de producto. Mantuve el esquema de color blanco y negro del sitio actual, pero agregué algunos toques morados para hacerlo menos contrastante y agresivo. Ahora la página de inicio se parece más a un catálogo de productos de marca.',
+    title: 'Online Store:  "La Pesebrera"',
+    description: 'I wanted to create an easy-to-use online store while maintaining the recognizable brand aesthetic. The shot shows a product page. I kept the black and white color scheme of the current site, but added some purple touches to make it less contrasting and aggressive. Now the home page looks more like a catalog of branded products.',
     link: 'https://lapesebrera.com/',
     image: 'projects/pesebrera.jpg',
     tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JS ]
  },
+ 
 
  {
-    title: "Rediseño de la aplicación 💰 Salary on Demand ",
+    title: "Redesign of the application 💰 Salary on Demand ",
     description:
-      'Durante mi mandato de cinco meses como diseñador de UX/UI en Payer en 2023, desempeñé un papel clave en el rediseño de la aplicación "Payer Salary on Demand". El objetivo era brindar a los usuarios un control financiero mejorado y crear una experiencia de banca digital más agradable. ',
+      'During my five-month tenure as a UX/UI Designer at Payer in 2023, I played a key role in the redesign of the “Payer Salary on Demand” app. The goal was to provide users with improved financial control and create a more enjoyable digital banking experience. ',
     link: "https://www.figma.com/proto/20oDrylRKMlrhLsqZatwaE/UX-CASE-STUDY-DEY--2.0?page-id=2%3A5&type=design&node-id=1528-1272&viewport=3072%2C-1777%2C0.19&scaling=contain&starting-point-node-id=1528%3A1272&show-proto-sidebar=1",
     image: 'projects/payerMockup.png',
     tags: [TAGS.HTML, TAGS.TAILWIND],
   },
+
+  {
+    title: 'Online Store:  "La Pesebrera"',
+    description: 'I wanted to create an easy-to-use online store while maintaining the recognizable brand aesthetic. The shot shows a product page. I kept the black and white color scheme of the current site, but added some purple touches to make it less contrasting and aggressive. Now the home page looks more like a catalog of branded products.',
+    link: 'https://caribbeansuntours.com/',
+    image: 'projects/caribbean.png',
+    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JS ]
+ },
 ]
 ---
 <div class="flex flex-col gap-y-16">
@@ -47,12 +59,12 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="mas sobre mis proyectos" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
   <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+    <h3 class="text-2xl font-bold text-yellow-400">
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
@@ -72,12 +84,27 @@ const PROJECTS = [
         </div>
 
         <div class="mt-4">
-      <p class="text-white-900 dark:text-gray-400">
+      <p class="text-gray-200 dark:text-gray-300 md:col-span-3 text-pretty">
         {description}
       </p>
-
       
     </div>
+    <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Code
+              
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link} target="_blank">
+              <Link class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+
 
       
 

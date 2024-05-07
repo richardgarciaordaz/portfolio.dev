@@ -11,28 +11,32 @@ import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
 import WorkIcon from '../components/icons/WorkIcon.astro';
 import CodeIcon from '../components/icons/CodeIcon.astro';
+import AboutMe from '../components/AboutMe.astro';
+import ProfileCheck from '../components/icons/ProfileCheck.astro';
+
+
 
 ---
 
-<Layout title="Portfolio de Richard García - Desarrollador y programador web con 5 años de experiencia"
-description= "Contrata a Richard García para crear tu app web o móvil. Desarrollador web . Especializado en crear aplicaciones únicas" >
+<Layout title="Portfolio Richard García - Web developer and programmer with 5 years of experience"
+description= "Hire Richard García to create your web or mobile app. Web developer . Specialized in creating unique applications" >
 
 	<main class="px-4 m-auto ">
 
 		<SectionContainer class="py-44 pb-32 ">
 			
 		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 ">
-			Hey, soy Richard! <a 
+			Hey, I'm Richard! <a 
 			href="https://www.linkedin.com/in/richard-garcia-ordaz/"
 			target="_blank"
 			rel="noopener"
 			><div class="flex justify-center items-center">
-				 <Badge>Disponible para trabajar</Badge>
+				 <Badge>Available to work</Badge>
 				</a>
 			</div>
 		</h1>
 
-		<h2 class="text-xl opacity-80 text-wrap max-w-[700px]"><span>+5 años de experiencia</span>. <span class=" text-yellow-200/90 opacity-80"> Desarrollador web y Especialista en Marketing</span>. <br><span class="opacity-80" >De Mérida, Venezuela. </span>Especializado en crear aplicaciones únicas</h2>
+		<h2 class="text-xl opacity-80 text-wrap max-w-[700px]"><span>+5 years of experience</span>. <span class=" text-yellow-200/90 opacity-80">Web Developer and Marketing Specialist</span>. <br><span class="opacity-80" >From Mérida, Venezuela. </span>Specialized in creating unique applications</h2>
 
 
 		<nav class="flex gap-4 mt-8 flex-wrap"> 
@@ -62,15 +66,22 @@ description= "Contrata a Richard García para crear tu app web o móvil. Desarro
 	<SectionContainer id="experiencia">
 		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 			<WorkIcon class="size-7" />
-			Experiencia laboral</h2>
+			Work experience</h2>
 				<Experience />
 	</SectionContainer>
 
-	<SectionContainer id="experiencia">
+	<SectionContainer id="projects">
 		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 			<CodeIcon class="size-7" />
-			Proyectos</h2>
+			Projects</h2>
 				<Projects />
+	</SectionContainer>
+
+	<SectionContainer id="about-me">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<ProfileCheck class="size-7" />
+			About me</h2>
+				<AboutMe />
 	</SectionContainer>
 
 	</main>
