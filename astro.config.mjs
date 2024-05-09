@@ -7,6 +7,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://portfolio.dev.github.io' 
+  site: 'https://richardgarciaordaz.github.io/portfolio.dev/' 
 
 });
