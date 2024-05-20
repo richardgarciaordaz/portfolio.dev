@@ -10,6 +10,6 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   integrations: [astroI18next(),tailwind()],
   site: 'https://richardgarciaordaz.github.io', // Reemplaza 'astronaut' con tu nombre de usuario de GitHub
-  base: 'richardgarciaordazux.github.io'
+  base: 'portfolio.dev'
 
 });
