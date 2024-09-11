@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import GithubIcon from '../components/icons/GithubIcon.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import WorkIcon from '../components/icons/WorkIcon.astro';
+import CodeIcon from '../components/icons/CodeIcon.astro';
+import AboutMe from '../components/AboutMe.astro';
+import ProfileCheck from '../components/icons/ProfileCheck.astro';
+
+
+
+---
+
+<Layout title="Portfolio Richard García - Web developer and programmer with 5 years of experience"
+description= "Hire Richard García to create your web or mobile app. Web developer . Specialized in creating unique applications" >
+
+	<main class="px-4 m-auto ">
+
+		<SectionContainer class="py-44 pb-32 ">
+			
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 ">
+			Hello, I'm Richard! <a 
+			href="https://www.linkedin.com/in/richard-garcia-ordaz/"
+			target="_blank"
+			rel="noopener"
+			><div class="flex justify-center items-center">
+				 <Badge>Available to work</Badge>
+				</a>
+			</div>
+		</h1>
+
+		<h2 class="text-xl opacity-80 text-wrap max-w-[700px]"><span>+5 years of experience</span>. <span class=" text-yellow-200/90 opacity-80">Web Developer and Marketing Specialist</span>. <br><span class="opacity-80" >From Merida, Venezuela. </span>Specialized in creating unique applications</h2>
+
+
+		<nav class="flex gap-4 mt-8 flex-wrap"> 
+				<SocialPill href="https://www.linkedin.com/in/richard-garcia-ordaz/">
+						<LinkedinIcon class="text-white size-4 md:size-6" />
+						LinkedIn</a>
+
+				</SocialPill>
+
+				<SocialPill href="https://github.com/richardgarciaordaz">
+					<GithubIcon class="text-white size-4 md:size-6" />
+					Github</a>
+
+				</SocialPill>
+
+				<SocialPill href="mailto:rchrdgrcordaz@gmail.com">
+					<MailIcon class="text-white size-4 md:size-6" />
+					rchrdgrcordaz@gmail.com</a>
+
+				</SocialPill>
+		
+		</nav>
+
+			
+		</SectionContainer>
+
+	<SectionContainer id="experiencia">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<WorkIcon class="size-7" />
+			Work experience</h2>
+				<Experience />
+	</SectionContainer>
+
+	<SectionContainer id="projects">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<CodeIcon class="size-7" />
+			Projects</h2>
+				<Projects />
+	</SectionContainer>
+
+	<SectionContainer id="about-me">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<ProfileCheck class="size-7" />
+			About me</h2>
+				<AboutMe />
+	</SectionContainer>
+
+	</main>
+
+</Layout>
